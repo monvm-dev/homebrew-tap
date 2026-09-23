@@ -5,21 +5,21 @@
 class Monvm < Formula
   desc "Lean observability infrastructure"
   homepage "https://monvm.dev"
-  version "0.1.0"
+  version "0.2.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/monvm-dev/monvm/releases/download/v0.1.0/monvm_0.1.0_darwin_amd64.tar.gz"
-      sha256 "e9ffc5c13f6490b96991248a6efb0f773d4639c4d2965460a5f6ea4f15a49d58"
+      url "https://github.com/monvm-dev/monvm/releases/download/v0.2.0/monvm_0.2.0_darwin_amd64.tar.gz"
+      sha256 "03e636152d4be7e1cd9e0d840b14f571c3789da107064d188483474def96e115"
 
       define_method(:install) do
         bin.install "monvm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/monvm-dev/monvm/releases/download/v0.1.0/monvm_0.1.0_darwin_arm64.tar.gz"
-      sha256 "b5188c6080980f04f128a88448fe54d3ad1aebbe130ee59e1eca29cdf2f035f8"
+      url "https://github.com/monvm-dev/monvm/releases/download/v0.2.0/monvm_0.2.0_darwin_arm64.tar.gz"
+      sha256 "097604c80ae540b355830659a64271c0358e471a746158ff2c396f79cd0f9f5f"
 
       define_method(:install) do
         bin.install "monvm"
@@ -29,15 +29,15 @@ class Monvm < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/monvm-dev/monvm/releases/download/v0.1.0/monvm_0.1.0_linux_amd64.tar.gz"
-      sha256 "ab98e8c9bd3103a5384a7c90286760cfa5b123e124071b56b0cbee02121d958a"
+      url "https://github.com/monvm-dev/monvm/releases/download/v0.2.0/monvm_0.2.0_linux_amd64.tar.gz"
+      sha256 "006ac246f894a276d5fd1fe3e24965785296c10af4dff367ef513415ace2420c"
       define_method(:install) do
         bin.install "monvm"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/monvm-dev/monvm/releases/download/v0.1.0/monvm_0.1.0_linux_arm64.tar.gz"
-      sha256 "14e84d8a8aba85076af582bd6f2d7ee31eaab20385630f46550538199e6bd28e"
+      url "https://github.com/monvm-dev/monvm/releases/download/v0.2.0/monvm_0.2.0_linux_arm64.tar.gz"
+      sha256 "679217807c666cde3c073539e061e71b1232617a3368cf9610d91e6df661160b"
       define_method(:install) do
         bin.install "monvm"
       end
